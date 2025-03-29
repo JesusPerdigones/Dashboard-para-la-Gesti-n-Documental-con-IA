@@ -122,7 +122,7 @@ Este proyecto está bajo la Licencia MIT - ver el archivo [LICENSE.md](LICENSE.m
 
 ## 👥 Equipo
 
-- **Desarrollo Frontend y Diseño UI/UX**: [Jesús Perdigones]
+- **Desarrollo Frontend y Diseño UI/UX**: Jesús Perdigones
 
 ## 📞 Contacto
 
