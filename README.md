@@ -2,7 +2,7 @@
 
 <div align="center">
 
-<div class="i-devicon:angular"></div>
+(<div class="i-devicon:angular"></div>)
 
 [![Angular](https://img.shields.io/badge/Angular-19-DD0031?style=for-the-badge&logo=angular)](https://angular.io/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.6.3-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
