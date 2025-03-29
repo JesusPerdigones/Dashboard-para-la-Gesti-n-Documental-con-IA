@@ -12,7 +12,7 @@
 
 ## 📋 Descripción
 
-Diseño de una aplicación web moderna desarrollada con Angular que revoluciona la gestión documental empresarial. Combina una interfaz intuitiva con funcionalidades avanzadas para optimizar el flujo de trabajo en el tratamiento de la gestión de documentos por Inteligencia Artificial.
+Diseño de una aplicación web moderna desarrollada con Angular que revoluciona la gestión documental empresarial. Combina una interfaz intuitiva con funcionalidades avanzadas para optimizar el flujo de trabajo en el tratamiento de la gestión de documentos por IA.
 
 ## 🚀 Características Principales
 
