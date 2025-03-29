@@ -1,4 +1,4 @@
-# Dasboard para la Gestión Documental con IA
+# Dashboard para la Gestión Documental con IA
 
 <div align="center">
 
