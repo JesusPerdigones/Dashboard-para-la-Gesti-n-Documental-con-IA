@@ -1,0 +1,112 @@
+<!-- Contenedor principal de la aplicación -->
+<div class="main-container">
+  <!-- Barra lateral de navegación -->
+  <nav class="sidebar">
+    <!-- Logo de la aplicación -->
+    <div class="logo">
+      <h2>Uniofy</h2>
+    </div>
+    <!-- Menú de navegación principal -->
+    <nav class="nav-menu">
+      <!-- Elemento de navegación: Panel -->
+      <a class="nav-item" [class.active]="activeMenu === 'panel'" (click)="setActiveMenu('panel')">
+        <i><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiPjxwYXRoIHN0cm9rZS1kYXNoYXJyYXk9IjE2IiBzdHJva2UtZGFzaG9mZnNldD0iMTYiIGQ9Ik01IDIxaDE0Ij48YW5pbWF0ZSBmaWxsPSJmcmVlemUiIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNob2Zmc2V0IiBkdXI9IjAuMnMiIHZhbHVlcz0iMTY7MCIvPjwvcGF0aD48cGF0aCBzdHJva2UtZGFzaGFycmF5PSIxNCIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjE0IiBkPSJNNSAyMXYtMTNNMTkgMjF2LTEzIj48YW5pbWF0ZSBmaWxsPSJmcmVlemUiIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNob2Zmc2V0IiBiZWdpbj0iMC4ycyIgZHVyPSIwLjJzIiB2YWx1ZXM9IjE0OzAiLz48L3BhdGg+PHBhdGggc3Ryb2tlLWRhc2hhcnJheT0iMjgiIHN0cm9rZS1kYXNob2Zmc2V0PSIyOCIgZD0iTTIgMTBsMTAgLThsMTAgOCI+PGFuaW1hdGUgZmlsbD0iZnJlZXplIiBhdHRyaWJ1dGVOYW1lPSJzdHJva2UtZGFzaG9mZnNldCIgYmVnaW49IjAuNHMiIGR1cj0iMC42cyIgdmFsdWVzPSIyODswIi8+PC9wYXRoPjwvZz48L3N2Zz4=" class="nav-icon" /></i>
+        <span>Panel</span>
+      </a>
+      <!-- Elemento de navegación: Documentos -->
+      <a class="nav-item" [class.active]="activeMenu === 'documentos'" (click)="setActiveMenu('documentos')">
+        <i><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDQ4IiBoZWlnaHQ9IjIwNDgiIHZpZXdCb3g9IjAgMCAyMDQ4IDIwNDgiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTE3OTIgMTI4MGgxMjh2NzY4SDEyOFY2NDBoMTI4VjI1NmgxMjhWMGgxNDA4ek01MTIgMTI4djEyOGgxMDI0djEwMjRoMTI4VjEyOHpNMzg0IDM4NHYyNTZoMzQ3bDY0MCA2NDBoMzdWMzg0em0xNDA4IDE1MzZ2LTUxMmgtNDc1TDY3NyA3NjhIMjU2djExNTJ6Ii8+PC9zdmc+" class="nav-icon" /></i>
+        <span>Envíos de documentos</span>
+      </a>
+      <!-- Elemento de navegación: SmartDoc -->
+      <a class="nav-item" [class.active]="activeMenu === 'smartdoc'" (click)="setActiveMenu('smartdoc')">
+        <i><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiIGQ9Im0zIDE3bDkgNWw5LTV2LTNsLTkgNWwtOS01di0zbDkgNWw5LTVWOGwtOSA1bC05LTVsOS01bDUuNDE4IDMuMDEiLz48L3N2Zz4=" class="nav-icon" /></i>
+        <span>SmartDoc</span>
+      </a>
+      <!-- Elemento de navegación: Historial -->
+      <a class="nav-item" [class.active]="activeMenu === 'historial'" (click)="setActiveMenu('historial')">
+        <i><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDI0IiBoZWlnaHQ9IjEwMjQiIHZpZXdCb3g9IjAgMCAxMDI0IDEwMjQiPjxwYXRoIGZpbGw9ImN1cnJlbnRDb2xvciIgZD0iTTEyOCAzODR2NDQ4aDc2OFYzODR6bS0zMi02NGg4MzJhMzIgMzIgMCAwIDEgMzIgMzJ2NTEyYTMyIDMyIDAgMCAxLTMyIDMySDk2YTMyIDMyIDAgMCAxLTMyLTMyVjM1MmEzMiAzMiAwIDAgMSAzMi0zMm02NC0xMjhoNzA0djY0SDE2MHptOTYtMTI4aDUxMnY2NEgyNTZ6Ii8+PC9zdmc+" class="nav-icon" /></i>
+        <span>Historial</span>
+      </a>
+      <!-- Elemento de navegación: Equipo -->
+      <a class="nav-item" [class.active]="activeMenu === 'equipo'" (click)="setActiveMenu('equipo')">
+        <i><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJjdXJyZW50Q29sb3IiIGQ9Ik0xOS4xOSA4Ljc3cS0uNDYgMC0uODYtLjE3cS0uMzktLjE3LS42OS0uNDd0LS40Ny0uNjlxLS4xNy0uNC0uMTctLjg2cTAtLjQ1LjE3LS44NXQuNDctLjY5cS4zLS4zLjY5LS40N3EuNC0uMTguODYtLjE3cS40NS0uMDEuODUuMTdxLjQuMTcuNy40N3EuMjkuMjkuNDcuNjlxLjE3LjQuMTcuODVxMCAuNDYtLjE3Ljg2cS0uMTcuMzktLjQ3LjY5dC0uNy40N3QtLjg1LjE3bTAtMy4xMnEtLjM5IDAtLjY5LjI3cS0uMjUuMjctLjI1LjY2dC4yNS42N3EuMy4yNS42OS4yNXQuNjYtLjI1cS4yOC0uMjUuMjgtLjY3cTAtLjM5LS4yOC0uNjZxLS4yNy0uMjctLjY2LS4yN00yMiAxMC4zM1YxNXEwIC42My0uMjQgMS4ycS0uMjYuNTctLjY3Ljk5cS0uNDMuNDMtMSAuNjdxLS41OS4yNS0xLjIxLjI1cS0uMzggMC0uNzYtLjExcS0uMzktLjA3LS43MS0uMjVxLS4yNC43OS0uNzEgMS40NHQtMS4xIDEuMTF0LTEuMzkuN3EtLjc2LjI3LTEuNTguMjdxLS45NiAwLTEuODEtLjMzcS0uODItLjMzLTEuNS0uOTRxLS42Ni0uNTctMS4wOS0xLjM2cS0uNDQtLjgtLjU3LTEuNzRIMi44M3EtLjMzIDAtLjU5LS4yNXEtLjI0LS4yNC0uMjQtLjU4VjcuNzNxMC0uMzQuMjQtLjU5cS4yNi0uMjQuNTktLjI0SDEwcS0uMjktLjYtLjI5LTEuMjVxMC0uNjEuMjMtMS4xNXEuMjItLjUuNjItLjkycS40LS4zOS45NC0uNjJxLjUtLjIzIDEuMTItLjIzcS42MSAwIDEuMTQuMjN0LjkzLjYycS40LjQyLjYyLjkycS4yMy41NC4yMyAxLjE1cTAgLjYtLjIzIDEuMTRxLS4yMi41My0uNjIuOTJxLS40LjQtLjkzLjYzdC0xLjE0LjIzcS0uMTUgMC0uMzEtLjAycS0uMTUtLjAyLS4zMS0uMDV2LjloOS4wNnEuMzkgMCAuNjcuMjdxLjI3LjI3LjI3LjY2TTEyLjYzIDRxLS4zNSAwLS42My4xMXEtLjMzLjEzLS41Ni4zNnEtLjIyLjIzLS4zNS41M3EtLjEzLjMxLS4xMy42NXEwIC4zNS4xMy42NXQuMzUuNTNxLjIzLjIyLjU2LjM2cS4yOC4xMy42My4xM3EuMzQgMCAuNjQtLjEzcS4zLS4xNC41My0uMzZxLjIzLS4yMy4zNi0uNTNxLjE0LS4zLjE0LS42NXEwLS4zNC0uMTQtLjY1cS0uMTMtLjMtLjM2LS41M3QtLjUzLS4zNnEtLjMtLjExLS42NC0uMTFtLTQuODUgNi4xOGgxLjg4VjguNjJINC4zNHYxLjU2aDEuODh2NWgxLjU2bTguNiAxLjA5di01LjYySDEydjUuNDJxMCAuMzQtLjI0LjU4cS0uMjYuMjUtLjU5LjI1SDguOTJxLjEzLjY3LjQ3IDEuMjVxLjM0LjU3LjgyLjk5cS40OC40MSAxLjEuNjVxLjYxLjIxIDEuMzIuMjFxLjc3IDAgMS40NS0uMjdxLjY4LS4zIDEuMi0uODFxLjUxLS41MS44LTEuMTlxLjMtLjY4LjMtMS40Nk0yMC43NSAxNXYtNC4zNWgtMy4xMnY1LjcxcS4yNS4yNS41Ny4zOHEuMy4xMi42OC4xMnEuMzkgMCAuNzMtLjE1dC41OS0uNHEuMjYtLjI1LjQtLjZxLjE1LS4zNC4xNS0uNzEiLz48L3N2Zz4=" class="nav-icon" /></i>
+        <span>Equipo</span>
+      </a>
+      <!-- Elemento de navegación: Soporte técnico -->
+      <a class="nav-item" [class.active]="activeMenu === 'soporte'" (click)="setActiveMenu('soporte')">
+        <i><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI1MTIiIGhlaWdodD0iNTEyIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0ibm9uZSIgc3Ryb2tlPSJjdXJyZW50Q29sb3IiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLXdpZHRoPSIzMiIgZD0iTTM2Ni4wNSAxNDZhNDYuNyA0Ni43IDAgMCAxLTIuNDItNjMuNDJhMy44NyAzLjg3IDAgMCAwLS4yMi01LjI2bC00NC4xMy00NC4xOGEzLjg5IDMuODkgMCAwIDAtNS41IDBsLTcwLjM0IDcwLjM0YTIzLjYgMjMuNiAwIDAgMC01LjcxIDkuMjRhMjMuNjYgMjMuNjYgMCAwIDEtMTQuOTUgMTVhMjMuNyAyMy43IDAgMCAwLTkuMjUgNS43MUwzMy4xNCAzMTMuNzhhMy44OSAzLjg5IDAgMCAwIDAgNS41bDQ0LjEzIDQ0LjEzYTMuODcgMy44NyAwIDAgMCA1LjI2LjIyYTQ2LjY5IDQ2LjY5IDAgMCAxIDY1Ljg0IDY1Ljg0YTMuODcgMy44NyAwIDAgMCAuMjIgNS4yNmw0NC4xMyA0NC4xM2EzLjg5IDMuODkgMCAwIDAgNS41IDBsMTgwLjQtMTgwLjM5YTIzLjcgMjMuNyAwIDAgMCA1LjcxLTkuMjVhMjMuNjYgMjMuNjYgMCAwIDEgMTQuOTUtMTVhMjMuNiAyMy42IDAgMCAwIDkuMjQtNS43MWw3MC4zNC03MC4zNGEzLjg5IDMuODkgMCAwIDAgMC01LjVsLTQ0LjEzLTQ0LjEzYTMuODcgMy44NyAwIDAgMC01LjI2LS4yMmE0Ni43IDQ2LjcgMCAwIDEtNjMuNDItMi4zMloiLz48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS13aWR0aD0iMzIiIGQ9Im0yNTAuNSAxNDAuNDRsLTE2LjUxLTE2LjUxbTYwLjUzIDYwLjUzbC0xMS4wMS0xMW01NS4wMyA1NS4wM2wtMTEtMTEuMDFtNjAuNTMgNjAuNTNsLTE2LjUxLTE2LjUxIi8+PC9zdmc+" class="nav-icon" /></i>
+        <span>Soporte técnico</span>
+      </a>
+    </nav>
+  </nav>
+  <!-- Área principal de contenido -->
+  <div class="content">
+    <!-- Cabecera con controles de usuario -->
+    <header class="header">
+      <div class="user-controls">
+        <!-- Indicador de notificaciones -->
+        <span class="notification-badge">
+          <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiPjxnPjxwYXRoIHN0cm9rZS1kYXNoYXJyYXk9IjQiIHN0cm9rZS1kYXNob2Zmc2V0PSI0IiBkPSJNMTIgM3YyIj48YW5pbWF0ZSBmaWxsPSJmcmVlemUiIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNob2Zmc2V0IiBkdXI9IjAuMnMiIHZhbHVlcz0iNDswIi8+PC9wYXRoPjxwYXRoIHN0cm9rZS1kYXNoYXJyYXk9IjI4IiBzdHJva2UtZGFzaG9mZnNldD0iMjgiIGQ9Ik0xMiA1Yy0zLjMxIDAgLTYgMi42OSAtNiA2bDAgNmMtMSAwIC0yIDEgLTIgMmg4TTEyIDVjMy4zMSAwIDYgMi42OSA2IDZsMCA2YzEgMCAyIDEgMiAyaC04Ij48YW5pbWF0ZSBmaWxsPSJmcmVlemUiIGF0dHJpYnV0ZU5hbWU9InN0cm9rZS1kYXNob2Zmc2V0IiBiZWdpbj0iMC4ycyIgZHVyPSIwLjRzIiB2YWx1ZXM9IjI4OzAiLz48L3BhdGg+PGFuaW1hdGVUcmFuc2Zvcm0gZmlsbD0iZnJlZXplIiBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIGJlZ2luPSIwLjlzIiBkdXI9IjZzIiBrZXlUaW1lcz0iMDswLjA1OzAuMTU7MC4yOzEiIHR5cGU9InJvdGF0ZSIgdmFsdWVzPSIwIDEyIDM7MyAxMiAzOy0zIDEyIDM7MCAxMiAzOzAgMTIgMyIvPjwvZz48cGF0aCBzdHJva2UtZGFzaGFycmF5PSI4IiBzdHJva2UtZGFzaG9mZnNldD0iOCIgZD0iTTEwIDIwYzAgMS4xIDAuOSAyIDIgMmMxLjEgMCAyIC0wLjkgMiAtMiI+PGFuaW1hdGUgZmlsbD0iZnJlZXplIiBhdHRyaWJ1dGVOYW1lPSJzdHJva2UtZGFzaG9mZnNldCIgYmVnaW49IjAuNnMiIGR1cj0iMC4ycyIgdmFsdWVzPSI4OzAiLz48YW5pbWF0ZVRyYW5zZm9ybSBmaWxsPSJmcmVlemUiIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgYmVnaW49IjEuMXMiIGR1cj0iNnMiIGtleVRpbWVzPSIwOzAuMDU7MC4xNTswLjI7MSIgdHlwZT0icm90YXRlIiB2YWx1ZXM9IjAgMTIgODs2IDEyIDg7LTYgMTIgODswIDEyIDg7MCAxMiA4Ii8+PC9wYXRoPjwvZz48L3N2Zz4=" class="notification-icon" />
+          <span class="notification-count">0</span>
+        </span>
+        <!-- Perfil de usuario -->
+        <div class="user-profile">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+            <g fill="none" stroke="currentColor" stroke-dasharray="28" stroke-dashoffset="28" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+              <path d="M4 21v-1c0 -3.31 2.69 -6 6 -6h4c3.31 0 6 2.69 6 6v1">
+              <animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="28;0"/></path>
+              <path d="M12 11c-2.21 0 -4 -1.79 -4 -4c0 -2.21 1.79 -4 4 -4c2.21 0 4 1.79 4 4c0 2.21 -1.79 4 -4 4Z"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.4s" values="28;0"/>
+              </path>
+            </g>
+          </svg>
+        </div>
+        <!-- Menú de acciones -->        
+        <div class="action-menu">
+          <button class="action-button inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 border border-input shadow-sm hover:bg-accent hover:text-accent-foreground px-4 py-2 h-10 bg-[#eeeeee] rounded-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ellipsis w-6 h-6">
+              <circle cx="12" cy="12" r="1"></circle>
+              <circle cx="19" cy="12" r="1"></circle>
+              <circle cx="5" cy="12" r="1"></circle>
+            </svg>
+          </button>
+          <!-- Menú desplegable -->          
+          <div class="dropdown-menu">
+            <!-- Sección de perfil -->
+            <div class="dropdown-section">
+              <a class="dropdown-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path fill="currentColor" d="M17 3h-3v3h-4V3H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2m-5 5a2 2 0 0 1 2 2a2 2 0 0 1-2 2a2 2 0 0 1-2-2a2 2 0 0 1 2-2m4 8H8v-1c0-1.33 2.67-2 4-2s4 .67 4 2zM13 5h-2V1h2zm3 14H8v-1h8zm-4 2H8v-1h4z"/>
+                </svg>
+                <span>Editar perfil</span>
+              </a>
+              <a class="dropdown-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                  <g fill="none" stroke="currentColor" stroke-linejoin="round" stroke-width="1">
+                    <circle cx="12" cy="12" r="9" stroke-linecap="round" stroke-width="1.5"/>
+                    <path stroke-width="2.25" d="M12 8h.01v.01H12z"/>
+                    <path stroke-linecap="round" stroke-width="1.5" d="M12 12v4"/>
+                  </g>
+                </svg>
+                <span>Información</span>
+              </a>
+            </div>
+            <!-- Sección de cierre de sesión -->
+            <div class="dropdown-section">
+              <a class="dropdown-item">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                  <path fill="currentColor" d="M2.93  17.07A10 10 0 1 1 17.07 2.93A10 10 0 0 1 2.93 17.07m1.41-1.41A8 8 0 1 0 15.66 4.34A8 8 0 0 0 4.34 15.66m9.9-8.49L11.41 10l2.83 2.83l-1.41 1.41L10 11.41l-2.83 2.83l-1.41-1.41L8.59 10L5.76 7.17l1.41-1.41L10 8.59l2.83-2.83z"/>
+                </svg>
+                <span>Cerrar sesión</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+     <!-- Título del contenido -->
+    <div class="content-title">
+      <h1>{{ getMenuTitle() }}</h1>
+    </div>
+  </div>
+</div>
