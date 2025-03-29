@@ -37,7 +37,7 @@ En construcción...
 - Clasificación automática por tipo y contenido
 - Extracción inteligente de datos clave
 
-### 📝 Historial y Trazabilidad
+### 📝 Historial
 - Registro detallado de todas las operaciones
 - Sistema avanzado de búsqueda y filtrado
 - Exportación de registros en múltiples formatos
